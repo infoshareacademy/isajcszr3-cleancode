@@ -1,0 +1,21 @@
+﻿@model IEnumerable<InfoShare.Csharp.CleanCode.Services.Client>
+
+@{
+	ViewBag.Title = "Our client";
+	
+}
+
+<h2>Our clients</h2>
+
+<div class="client-list">
+	@foreach (var client in Model)
+	{
+		<div class="client">
+			<img class="client-logo" src="@Url.Content($"~/images/{client.Logo}")" alt="Client logo">
+			<div class="client-data">
+				<p class="client-name">@client.Name</p>
+				<p class="client-comment">...</p>
+			</div>
+		</div>
+	}
+</div>
